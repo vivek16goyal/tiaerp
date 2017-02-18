@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>TiaERP@App</title>   
+    <script src="js/jquery.js"></script>
+    <style>
+        .first-main-page {
+            background-color: #1390cf /*1094d7*/;
+            overflow: hidden;
+        }
+        
+        .font {
+            color: #f8f6f6;
+            font-family: Verdana;
+        }
+        .span-tia{
+            font-size:17vmin;
+        }
+        .span-erp {
+            font-size: 10vmin;
+            display: block;
+            margin-top: -5vmin;
+            /*margin-left: 10vmin;*/
+        }
+
+        .shade
+        {
+           text-shadow:2px 2px 2px #abe3fb;
+        }
+        
+        .p-footer {            
+            position: absolute;
+            color: #f8f6f6;
+            font-family: Verdana;
+            font-size: 5vmin;
+            bottom: 0%;
+            right: 0%;
+        }
+       
+        .p-footer img{
+            width:20vh;
+            height:8vh;
+           
+        }
+    </style>
+     <link rel=" stylesheet" href="assets/css/animate.css">
+    <script>
+        //var APPType = "$"; //@ for generlized.... $ for specialized
+        //var Heading = "Shree Medical" // "TiaERP@ConsumerApp";
+        
+        function onDeviceReady() {
+            $("#div1").show();
+            c = setTimeout(function () {
+                textAnim('div1', 'flash');
+            }, 1000);
+            ////} else {
+            ////    $("#name").text(Heading);
+            ////    $("#div1").hide();
+            ////    $("#div2").show();
+            ////    textAnim('div2', 'flash');
+            ////}
+            a = setTimeout(function () {
+                $('#div').addClass('shade');
+            }, 2000);
+            b = setTimeout(function () {
+                window.location = "HomePage.html";
+            }, 3000);
+        }
+        function textAnim(evt, str) {
+            try {
+                $('#' + evt).addClass(str + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $('#' + evt).removeClass(str + ' animated');
+                    
+                });
+            } catch (err) {
+            }
+        };
+    </script>
+</head>
+
+<body class="first-main-page font" onload="onDeviceReady();">
+   <div style="margin-top:32vmin" id="div">
+       <div id="div1" style="display:none">
+           <center>
+               <span class="span-tia" style="font-size:20vmin;">TiaERP@</span>
+               <span class="span-erp" >ConsumerApp</span>
+           </center>
+       </div>
+       <!--<div id="div2" style="line-height:10vmin;display:none;">
+           <center>
+                <span id="name" style="font-size:20vmin;"></span>
+           </center>
+       </div>-->
+   </div>
+   <p class="p-footer">
+        Powered By: <a title="Goyal Bros. & Co." target="_blank" href="http://www.goyalonline.com">
+            <img src="assets/img/GBC.png" alt="jQuery Mobile">
+        </a>
+    </p>  
+       
+     
+</body>
+
+</html>

@@ -55,19 +55,15 @@
            
         }
     </style>
-
     <script>
+        var APPType = "@"; //@ for generlized.... $ for specialized
+        var Heading = "TiaERP@ConsumerApp";
 
         function onDeviceReady() {
-            try{
-                var d = new Date();
-                var rel = (d.getMonth().toString().length == 1) ? "0" + Number(d.getMonth() + 1) : Number(d.getMonth() + 1);
-            
-                document.getElementById("Release").innerHTML = "Release" + rel.toString().substr(rel.length-2, 2);
-                document.getElementById("Version").innerHTML = "Version" + d.getFullYear().toString().substr(2, 2);
-            } catch (e) {
-                alert(e.message);
-            }
+            var d = new Date();
+            var rel = (d.getMonth().toString().length == 1) ? "0" + Number(d.getMonth() + 1) : Number(d.getMonth() + 1);
+            document.getElementById("Release").innerHTML = "Release" + rel;
+            document.getElementById("Version").innerHTML = "Version" + d.getFullYear().toString().substr(2, 2);
             a = setTimeout(function () {
                 window.location = "HomePage.html";
             }, 3000);
@@ -79,8 +75,8 @@
     <div class="name-body">
         <span class="span-tia" style="font-size:24vmin;">TIA</span>
         <span class="span-erp">ERP</span>
-        <p id="Version" class="p-release">Release</p>
-        <p id="Release" class="p-version">Version</p>
+        <p id="Version" class="p-release">Release16</p>
+        <p id="Release" class="p-version">Version03</p>
     </div>
    
         <p class="p-footer">

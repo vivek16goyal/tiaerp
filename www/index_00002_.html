@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>TiaERP@App</title>   
+    <script src="js/jquery.js"></script>
+    <style>
+        .first-main-page {
+            background-color:white; /*#1390cf*/ /*1094d7*/
+            overflow: hidden;
+        }
+        
+        .font {
+            color: #f1f0f2;
+            font-family: Verdana;
+            font-weight:900;
+        }
+        .span-tia{
+            font-size:17vmin;
+        }
+        .span-erp {
+            font-size: 10vmin;
+            display: block;
+            margin-top: -5vmin;
+            /*margin-left: 10vmin;*/
+        }
+
+        .shade
+        {
+           text-shadow:2px 2px 12px #9ef6b3;
+        }
+        
+        .p-footer {            
+            position: absolute;
+            color: #808080;
+            font-family: Verdana;
+            font-size: 4vmin;
+            bottom: 0%;
+            right: 1%;
+            font-weight:100;
+        }
+       
+        .p-footer img{
+            width:20vh;
+            height:8vh;
+           
+        }
+    </style>
+     <link rel=" stylesheet" href="assets/css/animate.css">
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, true);
+        function onDeviceReady() {
+            c = setTimeout(function () {
+                textAnim('9', 'flash');
+                textAnim('8', 'flip');
+                textAnim('1', 'bounceInLeft');
+                textAnim('2', 'bounceInUp');
+                textAnim('3', 'bounceInDown');
+                textAnim('4', 'bounce');
+                textAnim('5', 'bounceInDown');
+                textAnim('6', 'bounceInUp');
+                textAnim('7', 'bounceInRight');
+            }, 400);
+            d = setInterval(function () {
+                textAnim('9', 'flash');
+            }, 1000);
+            b = setTimeout(function () {
+                window.location = "HomePage.html";
+            }, 5000);
+        }
+        function textAnim(evt, str) {
+            try {
+                $('#' + evt).addClass(str + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $('#' + evt).removeClass(str + ' animated');                    
+                });
+            } catch (err) {
+            }
+        };
+    </script>
+</head>
+
+<body class="first-main-page font" >
+        <script type="text/javascript" src="cordova.js"></script>
+
+  <center>
+     <div id="div" style="margin-top:10vmin;">
+       <div style="width:100%">
+           <img id="8" src="assets/img/shree_logo.png" style="width:180px;height:180px; margin-left:-10px"/>
+       </div>
+       <div style="width:100%;font-size:14VMIN;color:#009925;font-weight:900;" class="font shade">
+       <span id="1" style="margin-left:-130px;margin-top:-50px;position:absolute">M</span>
+       <span id="2" style="margin-left:-84px;margin-top:-20px; position:absolute">E</span>
+       <span id="3" style="margin-left:-50px;margin-top:0px;position:absolute">D</span>
+       <span id="4" style="margin-left:-10px;margin-top:15px;position:absolute">I</span>
+       <span id="5" style="margin-left:12px;margin-top:0px;position:absolute">C</span>
+       <span id="6" style="margin-left:52px;margin-top:-20px; position:absolute">A</span>
+       <span id="7" style="margin-left:85px; margin-top:-50px;position:absolute">L</span>
+       </div>
+       <div style="width:100%">
+           <img id="9" src="assets/img/AppKiPharmacy.png" style="width:300px;height:40px;margin-left:-10px;margin-top:65px"/>
+       </div>
+   </div>
+      </center>
+    <p class="p-footer">
+        Powered By: Goyal Bros & Co
+    </p>  
+       
+     
+</body>
+
+</html>

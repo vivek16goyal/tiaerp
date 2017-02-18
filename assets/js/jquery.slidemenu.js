@@ -219,9 +219,7 @@ Slide Menu
             this.$element.height(menuHeight).css("top", topOffset);
             if (this.options.side == "right") {
                 var itemsLeft = -this.options.iconWidth - parseInt($(".menu-items", this.$element).css("border-left-width"));
-                //$(".menu-items", this.$element).css("left", itemsLeft + "px");
-                itemsLeft = '-17';
-                $(".menu-items", this.$element).css("left", itemsLeft + "vmin");
+                $(".menu-items", this.$element).css("left", itemsLeft + "px");
             } else {
 
             }
@@ -241,8 +239,7 @@ Slide Menu
             leftBorder = parseInt($(".menu-items", instance.$element).css("border-left-width"));
             left = parseInt($(".menu-items", instance.$element).css("left"));
             movement = {
-                //left: parseInt(-instance.options.width - left - leftBorder) + "px"
-                left: "-80vmin"
+                left: parseInt(-instance.options.width - left - leftBorder) + "px"
             };
         } else if (instance.options.side == "left") {
             left = parseInt($(".menu-items", instance.$element).css("left"));
@@ -276,12 +273,10 @@ Slide Menu
             leftBorder = parseInt($(".menu-items", instance.$element).css("border-left-width"));
             left = parseInt($(".menu-items", instance.$element).css("left"));
             movement = {
-                //left: parseInt(-instance.options.width - left - leftBorder) + "px"
-                left: "-80vmin"
+                left: parseInt(-instance.options.width - left - leftBorder) + "px"
             };
         } else if (instance.options.side == "left") {
             left = parseInt($(".menu-items", instance.$element).css("left"));
-            
             movement = {
                 right: parseInt(-instance.options.width + instance.options.iconWidth) + "px"
             };

@@ -53,14 +53,14 @@ Slide Menu
   margin: 0px;
 }
 .slide-menu .menu-items .menu-item {
-  font-size: 9vmin;
+  font-size: 26px;
   border-top: 1px solid #aaaba9;
   border-bottom: 1px solid #aaaba9;
   display: block;
   cursor: pointer;
   position: absolute;
   left: 0px;
- width: 80vmin;
+  width: 100%;
   background-color: #dbdcd9;
 }
 .slide-menu .menu-items .menu-item .menu-close {
@@ -99,7 +99,7 @@ Slide Menu
   height: 0;
   background-color: white;
   position: absolute;
-  width: 80vmin;
+  width: 250px;
   top: 100%;
   overflow: auto;
   font-size: 14px;
@@ -107,7 +107,7 @@ Slide Menu
 }
 .menu-content span
 {
-    font-size:x-large;
-    margin-top:-2vmin;
+    font-size:15px;
+    margin-top:-10px;
     font-weight:bold;
 }
