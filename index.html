@@ -1,0 +1,96 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TiaERP@App</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        .first-main-page {
+            background-color: #1390cf /*1094d7*/;
+            overflow: hidden;
+        }
+        .name-body {
+            position: absolute;
+            margin-top: 25vmin;
+            margin-left: 10vmin;
+            text-shadow:1px 1px 12px #e6f4fb;
+        }
+        .font {
+            color: #f8f6f6;
+            font-family: Verdana;
+        }
+        .span-tia{
+            font-size:24vmin;
+        }
+        .span-erp {
+            font-size: 18vmin;
+            display: block;
+            margin-top: -16vmin;
+            margin-left: 37vmin;
+        }
+        .p-release {
+            font-size: 7vmin;
+            margin-left: 5vmin;
+            margin-top: -10vmin;
+        }
+        .p-version {
+            font-size: 5vmin;
+            margin-left: 39vmin;
+            margin-top: -29vmin;
+        }
+        .p-footer {            
+            position: absolute;
+            color: #f8f6f6;
+            font-family: Verdana;
+            font-size: 5vmin;
+            bottom: 0%;
+            right: 0%;
+        }
+       
+        .p-footer img{
+            width:20vh;
+            height:8vh;
+           
+        }
+    </style>
+
+    <script>
+
+        function onDeviceReady() {
+            try{
+                var d = new Date();
+                var rel = (d.getMonth().toString().length == 1) ? "0" + Number(d.getMonth() + 1) : Number(d.getMonth() + 1);
+            
+                document.getElementById("Release").innerHTML = "Release" + rel.toString().substr(rel.length-2, 2);
+                document.getElementById("Version").innerHTML = "Version" + d.getFullYear().toString().substr(2, 2);
+            } catch (e) {
+                alert(e.message);
+            }
+            a = setTimeout(function () {
+                window.location = "HomePage.html";
+            }, 3000);
+        }
+        
+    </script>
+</head>
+<body class="first-main-page font" onload="onDeviceReady();">
+    <div class="name-body">
+        <span class="span-tia" style="font-size:24vmin;">TIA</span>
+        <span class="span-erp">ERP</span>
+        <p id="Version" class="p-release">Release</p>
+        <p id="Release" class="p-version">Version</p>
+    </div>
+   
+        <p class="p-footer">
+            Powered By: <a title="Goyal Bros. & Co." target="_blank" href="http://www.goyalonline.com">
+                <img src="assets/img/GBC.png" alt="jQuery Mobile">
+            </a>
+        </p>
+
+  
+    <!--<p class="p-footer">Powered By: <a title="Goyal Bros. & Co." target="_blank" href="http://www.goyalonline.com">
+                                        <img src="assets/img/GBC.png" alt="jQuery Mobile" class="MainDiv-logo"></a></p>-->
+</body>
+</html>
